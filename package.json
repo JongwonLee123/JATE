@@ -1,0 +1,34 @@
+{
+    "name": "PWA_Text_Editor",
+    "version": "1.0.0",
+    "description": "A simple demo PWA to practice service worker usage",
+    "main": "server.js",
+    "scripts": {
+      "start:dev": "concurrently \"cd client && npm run build\" \"cd server && npm run server\" ",
+      "start": "npm run build && cd server && node server.js",
+      "server": "cd server node server.js --ignore client",
+      "build": "cd client && npm run build",
+      "install": "cd server && npm i && cd ../client && npm i",
+      "client": "cd client && npm start"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/JongwonLee123/PWA_Text_Editor.git"
+    },
+    "keywords": [],
+    "author": "Jongwon-Lee",
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/JongwonLee123/PWA_Text_Editor/issues"
+    },
+    "homepage": "https://github.com/JongwonLee123/PWA_Text_Editor#readme",
+    "dependencies": {
+      "express": "^4.17.1",
+      "if-env": "^1.0.4",
+      "mini-css-extract-plugin": "^2.7.2"
+    },
+    "devDependencies": {
+      "concurrently": "^5.2.0",
+      "nodemon": "^2.0.4"
+    }
+  }
